@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import UserForm,UserProfileInfoForm
+from basic_app.forms import UserForm,UserProfileInfoForm
 
 # Extra Imports for the Login and Logout Capabilities
 from django.contrib.auth import authenticate, login, logout
@@ -15,7 +15,7 @@ def index(request):
 def special(request):
     # Remember to also set login url in settings.py!
     # LOGIN_URL = '/basic_app/user_login/'
-    return HttpResponse("You are logged in. Nice!")
+    return HttpResponse("You are logged in. Nicely done!")
 
 @login_required
 def user_logout(request):
